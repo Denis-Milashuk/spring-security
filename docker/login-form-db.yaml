@@ -1,0 +1,13 @@
+services:
+  db:
+    container_name: login-form-postgres
+    image: postgres
+    environment:
+      POSTGRES_USER: myUser
+      POSTGRES_PASSWORD: secret
+      POSTGRES_DB: postgres
+    ports:
+      - 5332:5432
+    expose:
+      - 5432
+    restart: unless-stopped
