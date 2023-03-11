@@ -4,6 +4,7 @@ import com.example.milashuk.basic.ustil.AsyncUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.scheduling.annotation.Async;
 import org.springframework.scheduling.annotation.EnableAsync;
 import org.springframework.security.concurrent.DelegatingSecurityContextCallable;
@@ -27,7 +28,9 @@ public class BasicSecurityApplication {
     private AsyncUtil asyncUtil;
 
     public static void main(String[] args) {
-        SpringApplication.run(BasicSecurityApplication.class, args);
+
+        ConfigurableApplicationContext context = SpringApplication.run(BasicSecurityApplication.class, args);
+        Object springSecurityFilterChain = context.getBean("springSecurityFilterChain");
     }
 
     @GetMapping("/hello")
