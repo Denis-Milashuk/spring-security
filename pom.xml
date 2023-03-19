@@ -17,6 +17,10 @@
         <module>login-form-app</module>
         <module>authorization</module>
         <module>filter-chain</module>
+        <module>csrf-exmpl</module>
+        <module>corsExmpl</module>
+        <module>separation-of-responsabilities-app</module>
+        <module>separation-of-responsabilities-app/authentication-server</module>
     </modules>
 
     <properties>
