@@ -36,6 +36,15 @@ public class UserService {
         }
     }
 
+    public boolean check(Otp otpToValidate){
+        Optional<Otp> userOtp = otpRepository.findOtpByUserName(otpToValidate.getUserName());
+
+        return userOtp
+            .map(Otp::getCode)
+            .filter(code -> code.equals(otpToValidate.getCode()))
+            .isPresent();
+    }
+
     private void renewOtp(AuthUser authUser) {
         String code = GenerateCodeUtil.generateCode();
         otpRepository.save(new Otp()
