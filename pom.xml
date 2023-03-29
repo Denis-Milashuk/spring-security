@@ -21,6 +21,7 @@
         <module>corsExmpl</module>
         <module>separation-of-responsabilities-app</module>
         <module>separation-of-responsabilities-app/authentication-server</module>
+        <module>oauth2-github</module>
     </modules>
 
     <properties>
