@@ -20,8 +20,8 @@
         <module>csrf-exmpl</module>
         <module>corsExmpl</module>
         <module>separation-of-responsabilities-app</module>
-        <module>separation-of-responsabilities-app/authentication-server</module>
         <module>oauth2-github</module>
+        <module>oauth2-impl</module>
     </modules>
 
     <properties>
