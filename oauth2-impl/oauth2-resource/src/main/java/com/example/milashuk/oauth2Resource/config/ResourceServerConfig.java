@@ -7,7 +7,6 @@ import org.springframework.security.web.SecurityFilterChain;
 
 @EnableWebSecurity
 public class ResourceServerConfig {
-
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity httpSecurity) throws Exception {
         httpSecurity

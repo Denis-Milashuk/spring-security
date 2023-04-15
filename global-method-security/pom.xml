@@ -9,6 +9,9 @@
     </parent>
 
     <packaging>pom</packaging>
+    <modules>
+        <module>pre-and-post-auth</module>
+    </modules>
     <artifactId>global-method-security</artifactId>
 
     <properties>
