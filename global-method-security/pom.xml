@@ -11,6 +11,7 @@
     <packaging>pom</packaging>
     <modules>
         <module>pre-and-post-auth</module>
+        <module>pre-and-post-filtering</module>
     </modules>
     <artifactId>global-method-security</artifactId>
 
