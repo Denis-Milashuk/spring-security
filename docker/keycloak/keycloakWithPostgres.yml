@@ -1,0 +1,27 @@
+services:
+  postgres:
+    image: postgres
+    container_name: postgres-keycloak
+    environment:
+      POSTGRES_USER: myUser
+      POSTGRES_PASSWORD: secret
+      POSTGRES_DB: postgres
+    ports:
+      - 5332:5432
+    expose:
+      - 5432
+  keycloak:
+    build: .
+    container_name: my-keycloak
+    image: keycloak-custom
+    ports:
+      - 8443:8443
+    expose:
+      - 8443
+    environment:
+      ENV KC_DB_URL: postgres
+      KEYCLOAK_ADMIN: admin
+      KEYCLOAK_ADMIN_PASSWORD: admin
+    depends_on:
+      - postgres
+    entrypoint: ["/opt/keycloak/bin/kc.sh"]
