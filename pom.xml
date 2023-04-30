@@ -23,6 +23,7 @@
         <module>oauth2-github</module>
         <module>oauth2-impl</module>
         <module>global-method-security</module>
+        <module>keycloak-resource</module>
     </modules>
 
     <properties>
