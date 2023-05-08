@@ -24,6 +24,7 @@
         <module>oauth2-impl</module>
         <module>global-method-security</module>
         <module>keycloak-resource</module>
+        <module>reactive</module>
     </modules>
 
     <properties>
